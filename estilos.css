@@ -25,8 +25,14 @@ h1 span { color: var(--green); }
 h2 { margin: 0 0 12px; font-size: 40px; letter-spacing: -.04em; }
 .section-description { max-width: 340px; margin-bottom: 30px; color: var(--muted); font-size: 12px; line-height: 1.7; }
 .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.menu-card { padding: 22px; border: 1px solid var(--line); background: white; }
-.product-icon { display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 17px; border-radius: 50%; background: #e8eee3; color: var(--green); font-size: 20px; }
+.menu-card { position: relative; min-height: 280px; padding: 25px 22px 20px; border: 1px solid var(--line); border-top: 3px solid #9bad91; background: white; box-shadow: 0 5px 16px rgba(38,53,45,.035); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+.menu-card:nth-child(2) { border-top-color: #c89570; background: #fffdf8; }
+.menu-card:nth-child(3) { border-top-color: #82a2a3; }
+.menu-card:hover { transform: translateY(-7px); border-color: #cbd4c4; box-shadow: 0 16px 30px rgba(38,53,45,.11); }
+.product-icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 19px; border-radius: 50%; background: #e8eee3; color: var(--green); font-size: 20px; transition: transform .22s ease; }
+.menu-card:hover .product-icon { transform: scale(1.08) rotate(-5deg); }
+.menu-card:nth-child(2) .product-icon { background: #f1e4d8; color: var(--orange); }
+.menu-card:nth-child(3) .product-icon { background: #e4edef; color: #587b80; }
 .card-label { margin: 0 0 7px; color: var(--green); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .menu-card h3 { margin: 0 0 8px; font-size: 20px; }
 .menu-card > p:not(.card-label) { min-height: 42px; margin: 0 0 13px; color: var(--muted); font-size: 11px; line-height: 1.6; }
